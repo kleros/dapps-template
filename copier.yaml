@@ -15,8 +15,6 @@ project_description:
   default: "Awesome dapp arbitrated by Kleros."
 
 # Copier metadata
-_min_copier_version: "9.0.0"
-_subdirectory: "project"
 _tasks:
   # Git
   - "{% if initial_commit %}git init{% endif %}"
