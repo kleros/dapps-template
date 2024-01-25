@@ -1,0 +1,11 @@
+{
+  "name": "@kleros/{{project_name}}-tsconfig",
+  "version": "2.0.0",
+  "private": true,
+  "files": [
+    "base.json"
+  ],
+  "devDependencies": {
+    "@kleros/{{project_name}}-eslint-config": "*"
+  }
+}

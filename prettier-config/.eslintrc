@@ -1,0 +1,3 @@
+{
+  "extends": ["@kleros/{{project_name}}-eslint-config"]
+}
