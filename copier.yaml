@@ -4,11 +4,6 @@ project_name:
   help: "Project slug (used for GitHub, PyPI, etc.)"
   default: "my-dapp"
 
-project_friendly_name:
-  type: str
-  help: "Project Name (human readable version)"
-  default: "Dapp"
-
 project_description:
   type: str
   help: "A short description of the project (used by package.json description)"

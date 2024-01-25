@@ -43,7 +43,7 @@ const deploy: DeployFunction = async (hre: HardhatRuntimeEnvironment) => {
   const klerosCore = await deployments.get("KlerosCore");
   const disputeTemplateRegistry = await deployments.get("DisputeTemplateRegistry");
   
-  await deploy("{{ project_friendly_name.replace(' ', '-') }}", {
+  await deploy("{{ project_name.split('-') | map('capitalize') | join }}", {
     from: deployer,
     args: [
       klerosCore.address,
@@ -57,7 +57,7 @@ const deploy: DeployFunction = async (hre: HardhatRuntimeEnvironment) => {
   });
 };
 
-deploy.tags = ["{{ project_friendly_name.replace(' ', '-') }}"];
+deploy.tags = ["{{ project_name.split('-') | map('capitalize') | join }}"];
 deploy.skip = async ({ network }) => {
   return isSkipped(network, !HomeChains[network.config.chainId ?? 0]);
 };

@@ -12,7 +12,7 @@ import "@kleros/kleros-v2-contracts/arbitration/interfaces/IDisputeTemplateRegis
 
 /// @title TODO
 /// @dev TODO
-contract {{ project_friendly_name.replace(' ', '-') }} is IArbitrableV2 {
+contract {{ project_name.split('-') | map('capitalize') | join }} is IArbitrableV2 {
     // ************************************* //
     // *         Enums / Structs           * //
     // ************************************* //
