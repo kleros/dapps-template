@@ -14,17 +14,19 @@ project_description:
   help: "A short description of the project (used by package.json description)"
   default: "Awesome dapp arbitrated by Kleros."
 
-# Copier metadata
+_exclude:
+  - ".git"
+  - "copier.yaml"
+  - "copier.yml"
+  - "node_modules"
+  - "yarn.lock"
+  - "package-lock.json"
 _tasks:
   # Git
-  - "{% if initial_commit %}git init{% endif %}"
-  # - "{% if initial_commit %}git add .{% endif %}"
-  # - "{% if initial_commit %}git commit -m 'chore: initial commit'{% endif %}"
-  # # GitHub
-  # - "{% if setup_github %}gh repo create {{ github_username }}/{{ project_slug }} -d '{{ project_short_description }}' --public --remote=origin --source=. --push{% endif %}"
-  # - "{% if setup_github %}gh repo edit --delete-branch-on-merge --enable-projects=false --enable-wiki=false{% endif %}"
-  # - "{% if setup_github %}gh secret set GH_PAT -b 'changeme'{% endif %}"
-  # # Setup pre-commit
-  # - "{% if setup_pre_commit %}pre-commit install{% endif %}"
-  # # Add me as a contributor
-  # - "{% if add_me_as_contributor %}npx all-contributors-cli add {{ github_username }} code,ideas,doc{% endif %}"
+  - "git init"
+  - "git add ."
+  - "git commit -m 'chore: initial commit'"
+  # Install dependencies
+  - "yarn"
+  # Create generatedGitInfo.json placeholder
+  - "echo '{}' > web/src/generatedGitInfo.json"

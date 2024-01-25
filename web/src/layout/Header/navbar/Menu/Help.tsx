@@ -74,12 +74,12 @@ const ITEMS = [
   {
     text: "Report a Bug",
     Icon: Bug,
-    url: "https://github.com/kleros/{{project_name}}/issues",
+    url: "https://github.com/kleros/kleros-v2/issues", // TODO: FIXME
   },
   {
     text: "DApp Guide",
     Icon: Guide,
-    url: "https://docs.kleros.io/products/escrow",
+    url: "https://docs.kleros.io/products/kleros-v2", // TODO: FIXME
   },
   {
     text: "Crypto Beginner's Guide",
